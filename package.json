@@ -1,0 +1,37 @@
+{
+  "name": "blue-pencil-server",
+  "version": "0.1.0-alpha",
+  "description": "",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developmentseed/blue-pencil-server.git"
+  },
+  "author": {
+    "name": "Development Seed",
+    "url": "https://developmentseed.org"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/developmentseed/blue-pencil-server/ issues"
+  },
+  "homepage": "https://github.com/developmentseed/blue-pencil-server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "OC_ENV=development ./node_modules/nodemon/bin/nodemon.js app/index.js",
+    "start": "OC_ENV=production node app/index.js",
+    "postinstall": "[ -f app/config/local.js ] || echo 'module.exports = {};' > app/config/local.js"
+  },
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "boom": "^3.1.1",
+    "github": "^0.2.4",
+    "good": "^6.4.0",
+    "good-console": "^5.3.0",
+    "hapi": "^13.0.0",
+    "lodash": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
+}
