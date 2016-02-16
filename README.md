@@ -1,6 +1,5 @@
 # Blue Pencil Server
-
-[Blue Pencil Server description]
+This project goes handles Github authentication and creates Pull Requests for Blue Server. Please check that [repo](https://github.com/developmentseed/blue-pencil) for more information. 
 
 ### Requirements
 These dependencies are needed to build the app.

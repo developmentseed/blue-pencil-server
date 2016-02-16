@@ -1,6 +1,6 @@
 {
   "name": "blue-pencil-server",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0-beta",
   "description": "",
   "main": "app/index.js",
   "repository": {
