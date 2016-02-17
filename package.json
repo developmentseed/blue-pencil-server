@@ -1,7 +1,7 @@
 {
-  "name": "blue-pencil-server",
-  "version": "0.1.1-beta",
-  "description": "",
+  "name": "ocp-form-server",
+  "version": "1.0.0",
+  "description": "Ocp Form Server",
   "main": "app/index.js",
   "repository": {
     "type": "git",
