@@ -1,13 +1,13 @@
 # Blue Pencil Server
-
-[Blue Pencil Server description]
+This project handles Github authentication and creates Pull Requests for [Blue Pencil](https://github.com/developmentseed/blue-pencil). Please check that repo for more information.
 
 ### Requirements
 These dependencies are needed to build the app.
 
-- Node (v4.2.x) & Npm
+- Node (v4.2.x) & Npm ([nvm](https://github.com/creationix/nvm) usage is advised)
 
 > The versions mentioned are the ones used during development. It could work with newer ones.
+  Run `nvm use` to activate the correct version.
 
 ### Setup
 Install dependencies:
