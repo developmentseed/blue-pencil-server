@@ -1,5 +1,7 @@
-# Blue Pencil Server
-This project handles Github authentication and creates Pull Requests for [Blue Pencil](https://github.com/developmentseed/blue-pencil). Please check that repo for more information.
+# OCP form server
+This project handles Github authentication and creates Pull Requests for [OCP forms](https://github.com/developmentseed/ocp-form). Please check that repo for more information.
+
+This project is a fork of a [Blue Pencil server](https://github.com/developmentseed/blue-pencil-server).
 
 ### Requirements
 These dependencies are needed to build the app.
