@@ -1,6 +1,6 @@
 {
   "name": "blue-pencil-server",
-  "version": "0.1.0-beta",
+  "version": "0.1.1-beta",
   "description": "",
   "main": "app/index.js",
   "repository": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/developmentseed/blue-pencil-server",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests\" && exit 0",
     "start-dev": "OC_ENV=development ./node_modules/nodemon/bin/nodemon.js app/index.js",
     "start": "OC_ENV=production node app/index.js",
     "lint": "eslint app/ --ext .js",
