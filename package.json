@@ -1,11 +1,11 @@
 {
-  "name": "blue-pencil-server",
-  "version": "0.1.1-beta",
-  "description": "",
+  "name": "ocp-form-server",
+  "version": "1.0.0",
+  "description": "OCP Form Server",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/developmentseed/blue-pencil-server.git"
+    "url": "https://github.com/open-contracting-partnership/ocp-form-server.git"
   },
   "author": {
     "name": "Development Seed",
@@ -13,9 +13,9 @@
   },
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/developmentseed/blue-pencil-server/ issues"
+    "url": "https://github.com/open-contracting-partnership/ocp-form-server/ issues"
   },
-  "homepage": "https://github.com/developmentseed/blue-pencil-server",
+  "homepage": "https://github.com/open-contracting-partnership/ocp-form-server",
   "scripts": {
     "test": "echo \"No tests\" && exit 0",
     "start-dev": "OC_ENV=development ./node_modules/nodemon/bin/nodemon.js app/index.js",
