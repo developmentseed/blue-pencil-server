@@ -126,11 +126,11 @@ module.exports = {
             request.payload.meta.entrySHA,
             branch,
             'Data update',
-            request.payload.author.name,
-            request.payload.author.email
+            author.name,
+            author.email
           )
             .then(data => {
-              return github.createPR(`Data update from ${request.payload.author.name}`, branch)
+              return github.createPR(`Data update from ${author.name}`, branch)
                 .then(data => {
                   reply({
                     statusCode: 200,
