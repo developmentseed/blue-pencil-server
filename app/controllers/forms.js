@@ -2,6 +2,7 @@
 'use strict';
 var Boom = require('boom');
 var github = require('../services/github');
+var formsService = require('../services/forms');
 var config = require('../config');
 var _ = require('lodash');
 
@@ -34,9 +35,33 @@ module.exports = {
 
   entries: {
     handler: (request, reply) => {
-      github.getContent(`data/${request.params.formId}`)
+      Promise.all([
+        github.getContent(`data/${request.params.formId}`),
+        formsService.getEntriesIndex(request.params.formId)
+      ])
         .then((data) => {
-          let entries = data.map((o) => { return {name: o.name.replace('.json', '')}; });
+          let entriesList = data[0];
+          let _index;
+          if (data[1] !== null) {
+            try {
+              _index = JSON.parse((new Buffer(data[1].content, 'base64')).toString());
+            } catch (e) {
+              return reply(Boom.badImplementation('Resources were not valid JSON. ' + e.message));
+            }
+          }
+
+          // Remove _index if it exists.
+          entriesList = _.reject(entriesList, ['name', '_index.json']);
+
+          let entries = entriesList.map((o) => {
+            let _indexData = _.get(_index, o.name, {});
+            _indexData.id = o.name.replace('.json', '');
+            if (!_indexData.name) {
+              _indexData.name = _indexData.id;
+            }
+            return _indexData;
+          });
+
           reply({
             form: request.params.formId,
             entries
@@ -73,7 +98,7 @@ module.exports = {
 
           let res = {
             form: request.params.formId,
-            title: entryContent.title,
+            entryName: entryContent.name,
             entry: request.params.entryId,
             meta: {
               masterSHA: sha,
